@@ -1,0 +1,131 @@
+
+    :root {
+    --font-brand-1: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-brand-2: 'Dancing Script', serif;
+    --color-brand-1: #3cc5a7;
+    --color-brand-2: #0a2a43;
+    --color-brand-2-transparent: #0a2a431a;
+    --color-brand-3: #f2dc36;
+    --color-brand-3-light: #f5e779;
+    --color-success: #008080;
+    --color-error: #FF6347;
+    --color-white: #FFFFFF;
+    --color-light: #FBF9F9;
+    --color-gray: #808080;
+    --color-black: #000000;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--font-brand-1);
+}
+
+main{
+    width: 100%;
+    height:100vh;
+    background-image: linear-gradient(to bottom, var(--color-brand-2), var(--color-brand-1), var(--color-brand-3-light));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    width: 500px;
+    height: 600px;
+    background-color: var(--color-light);
+    border-radius: 4px;
+    padding: 15px;
+    overflow: hidden;
+}
+.box__title {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    padding-left: 70px;
+}
+.todo__field{
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    border: 2px solid var(--color-black);
+    box-shadow: 0px 0px 3px var(--color-gray);
+    font-weight: bold;
+    display: block;
+}
+.todo__list {
+    max-height: 380px;
+    list-style: none;
+    margin-top: 20px;
+    margin-left: 2px;
+    overflow-y: auto;
+}
+.message {
+    position: relative;
+    background-color: var(--color-brand-3);
+    color: var(--color-brand-2);
+    padding: 10px;
+    padding-right: 10px;
+    text-align: justify;
+    border-radius: 4px;
+    margin-top: 10px;
+    user-select: none;
+    white-space: initial;
+    text-align: center;
+}
+.message__button-close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.task {
+    padding: 10px;
+    position: relative;
+    background-color: var(--color-white);
+    border-radius: 4px;
+    box-shadow: 0.1rem 0.1rem 0.1rem var(--color-brand-2-transparent);
+}
+
+.task__text {
+    font-family: var(--font-brand-2);
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+.task__button-close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    line-height: 100%;
+    font-size: 1rem;
+    color: var(--color-error);
+    cursor: pointer;
+}
+
+.task:not(:last-child) {
+    margin-bottom: 0.5rem;
+}
+
+.task.is-done{
+    text-decoration: line-through;
+    color: var(--color-white);
+    background-color: var(--color-success) !important;
+}
+
+.task.is-done .task__button-close{
+    color: var(--color-white);
+}
+
+/* .btn{
+    position: relative;
+    width: 80px;
+    height: 35px;
+    font-weight: bolder;
+    padding: 2px;
+    background-color: var(--color-error);
+    color: var(--color-black);
+    margin-left: 193px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+} */
